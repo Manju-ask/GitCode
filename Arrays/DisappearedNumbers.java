@@ -7,8 +7,12 @@ import java.util.stream.Collectors;
 
 /*Given an array nums of n integers where nums[i] is in the range [1, n], 
 return an array of all the integers in the range [1, n] that do not appear in nums.*/
+/*Example 1:
+
+Input: nums = [4,3,2,7,8,2,3,1]
+Output: [5,6]*/
 		
-public class MissingNum {
+public class DisappearedNumbers {
     public List<Integer> findDisappearedNumbers(int[] nums) {
     	List<Integer> list = new ArrayList<Integer>();
     	List<Integer> res= new ArrayList<Integer>();
@@ -23,8 +27,8 @@ public class MissingNum {
     }
 	public static void main(String[] args) {
 		int[] arr= {4,3,2,7,8,2,3,1};
-		MissingNum missingNum= new MissingNum();
-		List<Integer> list = missingNum.findDisappearedNumbers(arr);
+		DisappearedNumbers num= new DisappearedNumbers();
+		List<Integer> list = num.findDisappearedNumbers(arr);
 		System.out.println(list);
 	}
 }
