@@ -36,7 +36,6 @@ public class UglyNum {
 			
 			if(j==1) {
 				count++;
-				System.out.println(i+" "+count);
 			}
 			if(count<n)
 				i++;
