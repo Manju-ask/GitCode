@@ -5,7 +5,7 @@ If target exists, then return its index. Otherwise, return -1.
 
 You must write an algorithm with O(log n) runtime complexity.*/
 
-class BinarySearch{
+public class DacBinarySearch{
 	public static int search(int[] arr, int low, int high,int key){
 		if(high==low)
 			if(arr[low]==key)
