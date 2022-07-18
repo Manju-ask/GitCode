@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode_arrays;
 
 /*Maximum Subarray
 Medium
@@ -45,5 +45,4 @@ public class KadanesMaxSumSubArray {
 		int[] nums = {-2,-1};
 		System.out.println(maxSubArray(nums));
 	}
-
 }

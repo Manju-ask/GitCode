@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode_arrays;
 
 /*
 Check if two arrays are equal or not

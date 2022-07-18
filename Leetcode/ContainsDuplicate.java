@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode_arrays;
 import java.util.HashSet;
 import java.util.Set;
 /*
@@ -21,17 +21,17 @@ public class ContainsDuplicate {
 		if (nums.length <= 1) {
 			return false;
 		}
-
 		while(i<nums.length) {
 			//add() returns false for unsuccessful insertion i.e for duplicate values.
 			if(!set.add(nums[i]))
 				return true;
 			i++;
 		}
-		return false;
+	return false;
+		
 	}
 	public static void main(String[] args) {
-		int[] nums = {1,2,3,4,5,6,7,4,10,11};
+		int[] nums = {1,2,2,4,5,6,7,4,10,11};
 		ContainsDuplicate duplicate = new ContainsDuplicate();
 		try {
 			System.out.println(duplicate.containsDuplicate(nums));

@@ -1,4 +1,5 @@
-package leetcode;
+package leetcode_arrays;
+
 import java.util.Arrays;
 /*Count all distinct pairs with difference equal to k
 Difficulty Level : Medium
@@ -29,5 +30,4 @@ public class DistinctPairsKdiff {
 		int res= distinctPairs(arr, k);
 		System.out.println(res);
 	}
-
 }
