@@ -15,9 +15,6 @@ public class ContainsDuplicate {
 		//Set does not allow duplicates
 		Set<Integer> set = new HashSet<Integer>();
 		int i=0;
-		if (nums.length == 0) {
-			throw new IllegalArgumentException("Array is empty!");
-		}
 		if (nums.length <= 1) {
 			return false;
 		}
