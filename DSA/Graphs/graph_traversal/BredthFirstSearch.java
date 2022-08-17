@@ -7,8 +7,8 @@ import java.util.Queue;
 
 public class BredthFirstSearch {
 	
-	public static List<Integer> bfsOfGraph(int startNode, int N, List<List<Integer>> adj){
-		List<Integer> bfs = new ArrayList<Integer>(); //to store traversal path.
+	public static List<Integer> bfs(int startNode, int N, List<List<Integer>> adj){
+		List<Integer> bfsList = new ArrayList<Integer>(); //to store traversal path.
 		
 		//first comes adjacent vertices, and are traversed first. 
 		Queue<Integer> q = new LinkedList<Integer>(); 
@@ -21,7 +21,7 @@ public class BredthFirstSearch {
 		
 		while(!q.isEmpty()) {
 			Integer temp = q.poll();  //Retrieves and removes the head of this queue.
-			bfs.add(temp);            //adding vertex in bfs traversal path.
+			bfsList.add(temp);        //adding vertex from BFS traversal path.
 			
 			//for each adjacent vertices of the current vertex.
 			for(Integer i: adj.get(temp)) {
@@ -31,7 +31,7 @@ public class BredthFirstSearch {
 				}	
 			}
 		}
-		return bfs;
+		return bfsList;
 		
 	}
 	
@@ -42,11 +42,11 @@ public class BredthFirstSearch {
 //		     (0)
 //		     / \
 //		    /	\
-//		  (1)   (5) 
+//		  (1)   (2) 
 //		  / \   / \
-//		 / (3) (6) \
-//		(2)  \ /   (7)
-//		     (4)
+//		 / (4) (5) \
+//		(3)  \ /   (6)
+//		     (7)
 		for(int i=0; i<N; i++) {
 			adj.add(new ArrayList<Integer>());
 		}
@@ -54,30 +54,30 @@ public class BredthFirstSearch {
 		adj.get(0).add(1);
 		adj.get(1).add(0);
 		
-		//edge 1--2  (undirected)
-		adj.get(1).add(2); //1->2  
-		adj.get(2).add(1); //2->1
+		adj.get(0).add(2);
+		adj.get(2).add(0);
 		
-		adj.get(1).add(3);
-		adj.get(3).add(1);
+		//edge 1--3  (undirected)
+		adj.get(1).add(3); //1->3  
+		adj.get(3).add(1); //3->1
 		
-		adj.get(3).add(4);
-		adj.get(4).add(3);
+		adj.get(1).add(4);
+		adj.get(4).add(1);
 		
-		adj.get(0).add(5);
-		adj.get(5).add(0);
+		adj.get(0).add(2);
+		adj.get(2).add(0);
 		
-		adj.get(5).add(6);
-		adj.get(6).add(5);
+		adj.get(2).add(5);
+		adj.get(5).add(2);
+		
+		adj.get(2).add(6);
+		adj.get(6).add(2);
 		
 		adj.get(5).add(7);
 		adj.get(7).add(5);
-		
-		adj.get(6).add(4);
-		adj.get(4).add(6);
 
 		int startNode = 0;
-		System.out.println(bfsOfGraph(startNode, N, adj));;
+		System.out.println(bfs(startNode, N, adj));
 	}
 
 }
