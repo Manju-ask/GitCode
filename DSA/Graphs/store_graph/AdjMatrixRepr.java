@@ -13,7 +13,7 @@ public class AdjMatrixRepr {
 //		Undirected graph:
 //			(1)-----(2)
 //			 |       |
-//			 |		 |
+//			 |	 |
 //			(3)-----(4)
 		
 		//edge 1--2  (undirected)

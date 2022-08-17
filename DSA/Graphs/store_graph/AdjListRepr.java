@@ -15,7 +15,7 @@ public class AdjListRepr {
 //		Undirected graph:
 //			(1)-----(2)
 //			 |       |
-//			 |		 |
+//			 |  	 |
 //			(3)-----(4)
 		
 		//creating deep copy of ArrayLists for all n vertices(i.e indices from 1 to n)
